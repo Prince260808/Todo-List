@@ -3,13 +3,13 @@ import "./TodoList.css"; //  Import the CSS
 
 export default function TodoList() {
   const [todos, setTodos] = useState([
-    { text: "Sample task", completed: false },
+    { text: "Sample task", completed: false,  },
   ]);
   const [newTodo, setNewTodo] = useState("");
 
   const addTask = () => {
     if (newTodo.trim() === "") return;
-    setTodos([...todos, { text: newTodo.trim(), completed: false }]);
+    setTodos([...todos, { text: newTodo.trim(), completed: false,}]);
     setNewTodo("");
   };
 
@@ -28,6 +28,9 @@ export default function TodoList() {
     const filteredTodos = todos.filter((_, i) => i !== index);
     setTodos(filteredTodos);
   };
+
+ 
+  
 
   return (
     <div className="todo-container">
